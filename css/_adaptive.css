@@ -1,0 +1,42 @@
+@media only screen and (max-width: 767px) {
+  div.polaroid {
+    -webkit-box-shadow: 0, 0, 0, 0;
+            box-shadow: 0, 0, 0, 0;
+    background: #8CC88C;
+    display: block;
+    width: 100%;
+  }
+  a.kiev {
+    display: none;
+  }
+  h2 {
+    color: #205620;
+    margin-right: 20px;
+    margin-left: 0;
+    margin-bottom: 10px;
+    font-size: calc(24px + 7.7 * (100vw - 320px) / 1280);
+  }
+  html {
+    background: #ACC8AC;
+  }
+  .h1 {
+    color: #002121;
+  }
+  img {
+    height: 100%;
+    width: 100%;
+  }
+  p {
+    font-size: 10pt;
+  }
+  .headDetail {
+    height: 45px;
+  }
+  .h1Detail {
+    font-size: 25pt;
+    color: #002121;
+  }
+  .wrapper {
+    background: #ACC8AC;
+  }
+}
