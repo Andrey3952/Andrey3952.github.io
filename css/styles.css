@@ -333,6 +333,14 @@ p {
   margin: 15px;
 }
 
+.listA7 {
+  position: relative;
+  left: 140px;
+}
+.listA7 a {
+  padding: 5px;
+}
+
 .wrapper {
   min-height: 100%;
   overflow: hidden;
@@ -450,18 +458,6 @@ footer.loaded {
   margin: 10px 0px 0px 0px;
 }
 
-.input {
-  z-index: 3;
-  padding: 5px;
-  background: rgb(236, 234, 234);
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  width: 20%;
-  outline: none;
-  box-sizing: border-box;
-  text-transform: uppercase;
-}
-
 .h1 {
   z-index: 3;
   font-size: calc(30px + 0.859375vw);
@@ -474,6 +470,21 @@ footer.loaded {
   color: #3f404a;
 }
 .h1 :hover {
+  color: #5d5e6d;
+}
+
+.h17 {
+  z-index: 3;
+  font-size: calc(30px + 0.859375vw);
+  left: -5%;
+  display: flex;
+  position: relative;
+  text-decoration: none;
+  text-align: center;
+  font-size: 35pt;
+  color: #3f404a;
+}
+.h17 :hover {
   color: #5d5e6d;
 }
 
@@ -507,9 +518,9 @@ footer.loaded {
 .list_menuA {
   color: #5a5a7a;
   text-transform: uppercase;
-  font-size: 18px;
+  font-size: 13px;
   text-decoration: none;
-  text-align: right;
+  text-align: center;
 }
 
 @media only screen and (min-width: 768px) {
@@ -551,35 +562,33 @@ footer.loaded {
 }
 .header_burger.active span {
   transform: scale(0);
-  transition: all 0.3s ease 0s;
+  transition: all 0.1s ease 0s;
 }
 .header_burger.active::before {
   transform: rotate(45deg);
   top: 9px;
-  background: #9d9fb0;
+  background: #fff;
 }
 .header_burger.active::after {
   transform: rotate(-45deg);
   bottom: 9px;
-  background: #9d9fb0;
+  background: #fff;
 }
 
 .header_menu {
-  position: fixed;
-  top: -100%;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: #e4e7ff;
-  display: block;
-  text-align: left;
-  transition: all 0.3s ease 0s;
+  position: absolute;
+  left: -100%;
+  top: 60px;
+  width: 23%;
+  height: 100vh;
+  text-align: center;
+  transition: all 0.7s ease 0s;
   padding: 60px 10px 20px 10px;
-  overflow: auto;
   z-index: -3;
 }
 .header_menu.active {
-  top: 0;
+  left: 0;
+  position: fixed;
 }
 
 body.lock {
@@ -661,7 +670,7 @@ div.polaroidIFP:hover {
 }
 
 .list_menuAIFPK {
-  font-size: calc(8.5px + 7.7 * (100vw - 320px) / 1280);
+  font-size: calc(15.5px + 7.7 * (100vw - 320px) / 1280);
   color: #5a5a7a;
   margin-left: 10px;
 }
@@ -669,7 +678,7 @@ div.polaroidIFP:hover {
 @media only screen and (min-width: 768px) {
   .list_menuAIFPK:hover {
     color: #000000;
-    font-size: calc(8.7px + 7.7 * (100vw - 320px) / 1280);
+    font-size: calc(16px + 7.7 * (100vw - 320px) / 1280);
     margin-left: 12px;
   }
   .list_menuAIFPh1:hover {
@@ -736,6 +745,15 @@ div.polaroidIFP:hover {
     background: #dae3da;
     display: block;
     width: 100%;
+  }
+  .header_menu {
+    width: 56%;
+    margin: 0, 0, 0, 0;
+    padding: 10px 0 0 0;
+    text-align: left;
+  }
+  .header_menu.active {
+    left: 0;
   }
   div.polaroidh {
     box-shadow: 0, 0, 0, 0;
@@ -830,9 +848,6 @@ div.polaroidIFP:hover {
   }
   .h2DetaliIF {
     margin-bottom: 25px;
-  }
-  .list_menuAIFPK {
-    font-size: 20px;
   }
   img {
     height: 100%;

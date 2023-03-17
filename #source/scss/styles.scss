@@ -95,6 +95,14 @@
     }
 }
 
+.listA7 {
+    position: relative;
+    left: 140px;
+    & a {
+        padding: 5px;
+    }
+}
+
 .wrapper {
     min-height: 100%;
     overflow: hidden;
@@ -102,7 +110,6 @@
     flex-direction: column;
 
     margin: 15px;
-    // padding: 120px 0px 0px 0px;
 }
 
 .con {

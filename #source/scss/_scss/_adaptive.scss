@@ -16,6 +16,16 @@
         width: 100%;
     }
 
+    .header_menu {
+        width: 56%;
+        margin: 0, 0, 0, 0;
+        padding: 10px 0 0 0;
+        text-align: left;
+        &.active {
+            left: 0;
+        }
+    }
+
     div.polaroidh {
         box-shadow: 0, 0, 0, 0;
         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0), 0 6px 20px 0 rgba(0, 0, 0, 0);
@@ -128,9 +138,9 @@
     .h2DetaliIF {
         margin-bottom: 25px;
     }
-    .list_menuAIFPK {
-        font-size: 20px;
-    }
+    // .list_menuAIFPK {
+    //     font-size: 20px;
+    // }
 
     img {
         height: 100%;
