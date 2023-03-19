@@ -814,7 +814,6 @@ div.polaroidIFP:hover {
     color: #426342;
     margin-right: 20px;
     margin-left: 0;
-    margin-bottom: 10px;
     font-size: calc(25px + 7.7 * (100vw - 320px) / 1280);
   }
   html {
@@ -836,9 +835,6 @@ div.polaroidIFP:hover {
   }
   .h1DetaliIF {
     left: 50%;
-  }
-  .detailIF {
-    margin-top: 150px;
   }
   .detailIF img {
     text-align: center;
