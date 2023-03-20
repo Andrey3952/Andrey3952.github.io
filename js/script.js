@@ -1,7 +1,7 @@
 
 
 window.onload = () => {
-
+    $('.in').hide();
 
     // Відкривання меню
     $('.header_burger').click(function (event) {
@@ -35,9 +35,58 @@ window.onload = () => {
         window.scrollTo(0, 0)
     }
 
+    let input = document.querySelector('#input');
 
 
 
+    input.oninput = function () {
+        let valu = this.value.trim();
+        let value = valu.toUpperCase();
+
+        let list = document.querySelectorAll('.mainPage li');
+        // console.log(Object.keys(list).length); // - всего обектов
+
+
+        if (value != '') {
+            list.forEach(elem => {
+                // console.log(elem.innerText.length);
+                let a = elem.innerText.search(value);
+                // console.log(a);
+                // console.log(a);
+
+
+
+                if (elem.innerText.search(value) == -1) {
+                    elem.classList.add('hide')
+
+
+
+                    // console.log($('.hide').length);
+
+
+                    // console.log(elem.classList); //typeof()
+
+
+                }
+                $('h1').click(function (event) {
+                    $('#input').val('');
+                    elem.classList.remove('hide');
+                });
+            });
+        } else {
+            list.forEach(elem => {
+                elem.classList.remove('hide');
+            });
+        }
+        if ($('.hide').length == Object.keys(list).length) {
+            // document.write('Пусто')
+            $('.in').show();
+
+        } else {
+            $('.in').hide();
+
+        }
+    }
 
 
 

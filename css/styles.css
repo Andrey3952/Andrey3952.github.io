@@ -1,4 +1,11 @@
 @charset "UTF-8";
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  select:focus,
+  textarea:focus,
+  input:focus {
+    font-size: 16px;
+  }
+}
 * {
   margin: 0;
   padding: 0;
@@ -70,6 +77,12 @@ a::hover {
 
 ul li {
   list-style: none;
+  list-style-type: none;
+}
+
+li {
+  list-style: none;
+  list-style-type: none;
 }
 
 img {
@@ -333,6 +346,10 @@ p {
   margin: 15px;
 }
 
+.in {
+  text-align: center;
+}
+
 .listA7 {
   position: relative;
   left: 140px;
@@ -573,6 +590,18 @@ footer.loaded {
   transform: rotate(-45deg);
   bottom: 9px;
   background: #fff;
+}
+
+.input {
+  z-index: 3;
+  padding: 5px;
+  background: rgb(236, 234, 234);
+  border: 1px solid #ccc;
+  margin: 5px;
+  border-radius: 8px;
+  outline: none;
+  box-sizing: border-box;
+  text-transform: uppercase;
 }
 
 .header_menu {
@@ -879,4 +908,11 @@ div.polaroidIFP:hover {
 .h {
   width: 30%;
   height: 30%;
+}
+
+.pInput {
+  position: relative;
+  z-index: -99;
+  font-size: 0px;
+  text-transform: uppercase;
 }

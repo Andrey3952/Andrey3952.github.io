@@ -1,3 +1,10 @@
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+    select:focus,
+    textarea:focus,
+    input:focus {
+        font-size: 16px;
+    }
+}
 @import "_scss/_nullstyles";
 @import "_scss/_mainPage";
 @import "_scss/_detailPage";
@@ -93,6 +100,10 @@
         margin: 15px;
         // color: white;
     }
+}
+
+.in {
+    text-align: center;
 }
 
 .listA7 {
@@ -213,4 +224,11 @@ footer.loaded {
 .h {
     width: 30%;
     height: 30%;
+}
+
+.pInput {
+    position: relative;
+    z-index: -99;
+    font-size: 0px;
+    text-transform: uppercase;
 }

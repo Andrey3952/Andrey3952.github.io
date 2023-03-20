@@ -153,6 +153,18 @@
         background: #fff;
     }
 }
+.input {
+    z-index: 3;
+    padding: 5px;
+    background: rgb(236, 234, 234);
+    border: 1px solid #ccc;
+    margin: 5px;
+    border-radius: 8px;
+    // width: 20%;
+    outline: none;
+    box-sizing: border-box;
+    text-transform: uppercase;
+}
 
 .header_menu {
     position: absolute;
