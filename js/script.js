@@ -71,6 +71,7 @@ window.onload = () => {
                 $('h1').click(function (event) {
                     $('#input').val('');
                     elem.classList.remove('hide');
+                    $('.in').hide();
                 });
             });
         } else {
