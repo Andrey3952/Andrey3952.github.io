@@ -87,7 +87,28 @@ img {
     height: 500px;
     width: 550px;
 }
+/* For the "inset" look only */
 
+/* Let's get this party started */
+::-webkit-scrollbar {
+    display: none;
+    // width: 12px;
+}
+
+/* Track */
+
+// ::-webkit-scrollbar {
+//     width: 20px;
+// }
+
+// ::-webkit-scrollbar-track {
+//     background: #dddddd;
+// }
+
+// ::-webkit-scrollbar-thumb {
+//     background: #e4e7ff;
+//     height: 0px;
+// }
 // .h1 {
 //     position: relative;
 //     z-index: 2;

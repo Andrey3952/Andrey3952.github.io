@@ -48,3 +48,20 @@
     opacity: 0;
   }
 }
+
+.fa-caret-down {
+  &:before {
+    content: "\e900";
+  }
+
+  position: fixed;
+  bottom: 150px;
+  right: 50px;
+  font-size: 50px;
+  z-index: 9999;
+  color: #9c9faf;
+
+  &:hover {
+    color: #252532;
+  }
+}
