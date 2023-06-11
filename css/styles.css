@@ -226,15 +226,19 @@ p {
 }
 
 .detailA {
+  color: #40456c;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 1.35em;
   text-decoration: none;
-  border-radius: 5px;
-  margin-left: 0px;
-  font-size: 20pt;
-  color: #383c5e;
-  outline: none;
+  font-weight: bold;
+  font-family: "Lora", serif;
+  position: relative;
+  transition: color 0.5s, text-shadow 0.5s;
 }
-.detailA:hover {
-  color: #000;
+
+a.detailA:hover {
+  color: #adb9ff;
 }
 
 @media only screen and (min-width: 766px) {
@@ -506,6 +510,7 @@ footer.loaded {
   text-align: center;
   font-size: 35pt;
   color: #3f404a;
+  transition: color 0.35s, text-shadow 0.35s;
 }
 .h1 :hover {
   color: #5d5e6d;
@@ -616,8 +621,8 @@ footer.loaded {
 .input {
   z-index: 3;
   padding: 5px;
-  background: rgb(236, 234, 234);
-  border: 1px solid #ccc;
+  background: #5a5a7a;
+  border: 0px solid;
   margin: 5px;
   border-radius: 8px;
   outline: none;
@@ -627,7 +632,7 @@ footer.loaded {
 
 .header_menu {
   position: absolute;
-  left: -100%;
+  left: -10%;
   top: 50px;
   width: 23%;
   height: 100vh;

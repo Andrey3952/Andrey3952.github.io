@@ -38,18 +38,40 @@ p {
     font-size: calc(35px + 11 * (100vw / 1280));
 }
 
-.detailA {
-    text-decoration: none;
-    border-radius: 5px;
-    margin-left: 0px;
-    font-size: 20pt;
-    color: #383c5e;
-    outline: none;
+// .detailA {
+//     text-decoration: none;
+//     border-radius: 5px;
+//     margin-left: 0px;
+//     font-size: 20pt;
+//     color: #383c5e;
+//     outline: none;
 
-    &:hover {
-        // box-shadow: 0 4px 8px 3px rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-        // border-bottom: 1px solid;
-        // background: #52824F;
-        color: #000;
-    }
+//     &:hover {
+//         // box-shadow: 0 4px 8px 3px rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+//         // border-bottom: 1px solid;
+//         // background: #52824F;
+//         color: #000;
+//     }
+// }
+
+.detailA {
+    color: #40456c;
+    // padding: 5px 0;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 1.35em;
+    // font-size: 6vw; /* размер шрифта относительно ширины браузера */
+    text-decoration: none;
+    font-weight: bold;
+    font-family: "Lora", serif;
+    // color: #e76f51;
+    position: relative;
+    transition: color 0.5s, text-shadow 0.5s;
+}
+a.detailA:hover {
+    color: #adb9ff;
+    // color: white;
+    // text-shadow: 0 0 16px rgba(16, 100, 155, 0.64);
+
+    // text-shadow: 0 0 16px rgba(244, 162, 97, 0.64);
 }
