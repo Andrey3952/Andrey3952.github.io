@@ -1,74 +1,59 @@
 @media only screen and (max-width: 767px) {
     .header_burger {
         left: 50%;
-        // display: block;
+        display: block;
     }
     .header_body {
         right: 50%;
     }
-
     div.polaroid {
         box-shadow: 0, 0, 0, 0;
         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0), 0 6px 20px 0 rgba(0, 0, 0, 0);
-
         background: #dae3da;
         display: block;
         width: 100%;
     }
-
     .header_menu {
         width: 56%;
         margin: 0, 0, 0, 0;
         padding: 10px 0 0 0;
-        text-align: left;
         &.active {
             left: 0;
         }
     }
-
     div.polaroidh {
         box-shadow: 0, 0, 0, 0;
         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0), 0 6px 20px 0 rgba(0, 0, 0, 0);
-
         background: #dae3da;
         display: block;
         width: 100%;
     }
-
     .containerIF {
         background: #dae3da;
     }
-
     .polaroidIFP {
         background: #dae3da;
     }
-
     .preloader__item {
         background-color: #99e899;
     }
-
     .header {
         width: 100%;
         height: 50px;
     }
-
     .h1IF {
         position: relative;
         left: 35%;
     }
-
     .menu {
         display: none;
     }
-
     .page {
         margin-top: 60px;
     }
-
     a.kiev {
         display: none;
     }
-
     #ImgLeft {
         margin-right: 10px;
         margin-left: auto;
@@ -76,7 +61,6 @@
         height: 150px;
         width: 200px;
     }
-
     #ImgRight {
         margin-right: 15px;
         margin-left: 10px;
@@ -84,29 +68,23 @@
         height: 150px;
         width: 200px;
     }
-
     .list_menuA {
         text-decoration: none;
         color: #426342;
     }
-
     h2 {
         font-size: calc(30px + (11 * 0.7) * ((100vw - 320px) / 1280));
         color: #426342;
     }
-
     h3 {
         color: #426342;
         margin-right: 20px;
         margin-left: 0;
-        // margin-bottom: 10px;
         font-size: calc(25px + (11 * 0.7) * ((100vw - 320px) / 1280));
     }
-
     html {
         background: #f5fff5;
     }
-
     .h1 {
         color: #002121;
         text-transform: uppercase;
@@ -124,7 +102,6 @@
     .h1DetaliIF {
         left: 50%;
     }
-
     .detailIF {
         // margin-top: 150px;
         & img {
@@ -134,49 +111,39 @@
             height: 100%;
         }
     }
-
     .h2DetaliIF {
         margin-bottom: 25px;
     }
     // .list_menuAIFPK {
     //     font-size: 20px;
     // }
-
     img {
         height: 100%;
         width: 100%;
     }
-
     p {
         font-size: 10pt;
     }
-
     .headDetail {
         height: 45px;
     }
-
     .h1Detail {
         font-size: 25pt;
         color: #002121;
     }
-
     .wrapper {
         background: #f5fff5;
     }
-
     .preloader {
         background: #f5fff5;
     }
-
     .preloader__item {
         background-color: #99e899;
     }
-
     .detailA {
         color: #426342;
         font-size: 15pt;
     }
-
     .h1IstorichniFoto {
         left: 30%;
     }
