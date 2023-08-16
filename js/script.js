@@ -1,8 +1,6 @@
-
-
 window.onload = () => {
 
-    let c = function (a) {
+    let c = function(a) {
         console.log(a)
     }
 
@@ -18,7 +16,7 @@ window.onload = () => {
 
 
     // Відкривання меню
-    $('.header_burger').click(function (event) {
+    $('.header_burger').click(function(event) {
         $('.header_burger,.header_menu').toggleClass('active');
     });
 
@@ -27,11 +25,24 @@ window.onload = () => {
 
 
     // Закривання меню
-    $('.list_menuLi').click(function (event) {
+    $('.list_menuLi').click(function(event) {
         $('.header_burger,.header_menu').removeClass('active');
     });
 
     //------------------------------------------------------------------------------------------------------------------------------
+
+
+    // 
+    $('#cross').click(function(event) {
+        document.querySelector('input').value = '';
+    });
+
+    //------------------------------------------------------------------------------------------------------------------------------
+
+    $('#arrow').click(function(event) {
+        $('.header_burger,.header_menu').removeClass('active');
+    });
+
 
 
     const scrollBtn = document.querySelector('.isShowBtn')
@@ -54,6 +65,8 @@ window.onload = () => {
         let filter = input.value.toUpperCase();
         let ul = document.getElementById("list");
         let li = ul.getElementsByTagName("li");
+
+
         // let listIF = document.querySelectorAll('.istorichniFotoPage li');
         // console.log(ul);
 
@@ -71,6 +84,10 @@ window.onload = () => {
                     // li[i].style.display = "none";
                     li[i].classList.remove('hide');
                 }
+                $('#cross').click(function(event) {
+                    li[i].classList.remove('hide');
+                });
+
 
             }
         }

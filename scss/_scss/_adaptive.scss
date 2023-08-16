@@ -14,7 +14,9 @@
         width: 100%;
     }
     .header_menu {
-        width: 56%;
+        position: absolute;
+        width: 100%;
+        left: -100%;
         margin: 0, 0, 0, 0;
         padding: 10px 0 0 0;
         &.active {

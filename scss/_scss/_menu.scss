@@ -148,10 +148,10 @@
 
 .input {
     z-index: 3;
-    padding: 5px;
-    background: #5a5a7a;
-    border: 0px solid;
-    margin: 5px;
+    padding: 3px;
+    background: #E4E7FF;
+    border: 2px solid #5a5a7a;
+    // margin: 5px;
     border-radius: 8px;
     // width: 20%;
     outline: none;
@@ -159,9 +159,17 @@
     text-transform: uppercase;
 }
 
+#cross,
+#arrow {
+    color: #5a5a7a;
+    &:hover {
+        color: #9c9faf;
+    }
+}
+
 .header_menu {
     position: absolute;
-    left: 0;
+    left: -4%;
     // left: 0;
     top: 50px;
     width: 23%;
@@ -179,6 +187,12 @@
         position: fixed;
     }
 }
+
+.fa-solid {
+    margin: 5px;
+}
+
+@media only screen and (max-width: 767px) {}
 
 body.lock {
     overflow: hidden;

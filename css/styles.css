@@ -573,7 +573,7 @@ footer.loaded {
   }
 }
 .header_burger {
-  display: block;
+  display: none;
   width: 30px;
   height: 20px;
   position: relative;
@@ -620,19 +620,27 @@ footer.loaded {
 
 .input {
   z-index: 3;
-  padding: 5px;
-  background: #5a5a7a;
-  border: 0px solid;
-  margin: 5px;
+  padding: 3px;
+  background: #E4E7FF;
+  border: 2px solid #5a5a7a;
   border-radius: 8px;
   outline: none;
   box-sizing: border-box;
   text-transform: uppercase;
 }
 
+#cross,
+#arrow {
+  color: #5a5a7a;
+}
+#cross:hover,
+#arrow:hover {
+  color: #9c9faf;
+}
+
 .header_menu {
   position: absolute;
-  left: -10%;
+  left: -4%;
   top: 50px;
   width: 23%;
   height: 100vh;
@@ -644,6 +652,10 @@ footer.loaded {
 .header_menu.active {
   left: 0;
   position: fixed;
+}
+
+.fa-solid {
+  margin: 5px;
 }
 
 body.lock {
@@ -789,6 +801,7 @@ div.polaroidIFP:hover {
 @media only screen and (max-width: 767px) {
   .header_burger {
     left: 50%;
+    display: block;
   }
   .header_body {
     right: 50%;
@@ -801,10 +814,11 @@ div.polaroidIFP:hover {
     width: 100%;
   }
   .header_menu {
-    width: 56%;
+    position: absolute;
+    width: 100%;
+    left: -100%;
     margin: 0, 0, 0, 0;
     padding: 10px 0 0 0;
-    text-align: left;
   }
   .header_menu.active {
     left: 0;

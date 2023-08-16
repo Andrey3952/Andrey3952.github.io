@@ -5,29 +5,25 @@
         font-size: 16px;
     }
 }
+
 @import "_scss/_nullstyles";
 @import "_scss/_mainPage";
 @import "_scss/_detailPage";
-
 @media only screen and (min-width: 766px) {
     @import "_scss/_iconsfont";
-
     .mainPage {
         & h2 {
             color: #dcdcdc;
         }
     }
-
     .Img {
         border-radius: 35px;
         width: 100%;
     }
-
     .polaroid {
         display: inline-block;
         position: relative;
     }
-
     .polaroidh div {
         display: none;
         position: absolute;
@@ -37,7 +33,6 @@
         padding: 5px 5px 5px 10px;
         color: #bbbbbb;
     }
-
     .polaroid div {
         display: none;
         position: absolute;
@@ -47,23 +42,18 @@
         padding: 5px 5px 5px 10px;
         color: #bbbbbb;
     }
-
     .polaroidh:hover div {
         display: block;
     }
-
     .polaroid:hover div {
         display: block;
     }
-
     body {
         background: #e4e7ff;
-
         &.lock {
             overflow: hidden;
         }
     }
-
     html {
         background: #e4e7ff;
     }
@@ -92,10 +82,8 @@
     position: relative;
     bottom: 35px;
     display: none;
-
     & h2 {
         position: relative;
-
         bottom: 10px;
         margin: 15px;
         // color: white;
@@ -119,7 +107,6 @@
     overflow: hidden;
     display: flex;
     flex-direction: column;
-
     margin: 15px;
 }
 
@@ -202,7 +189,6 @@ h2 {
     100% {
         transform: scale(0);
     }
-
     50% {
         transform: scale(1);
     }
@@ -220,7 +206,6 @@ footer.loaded {
 @import "_scss/_menu";
 @import "_scss/istorichniFoto";
 @import "_scss/_adaptive";
-
 .h {
     width: 30%;
     height: 30%;
