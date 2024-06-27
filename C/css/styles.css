@@ -1,0 +1,417 @@
+
+
+
+
+.playingField {
+    display: flex;
+    justify-content: center;
+    background: #fff;
+    margin-top: 40px;
+    /* height: 100vh;
+    width: 100vh;  */
+
+
+}
+
+.gameSquares {
+    /* height: 30vh;
+    width: 30vh; */
+    background: #fff;
+    border: 1.3vh solid black;
+}
+
+.CA,
+.CB,
+.CC {
+    border-bottom: white;
+}
+
+.AA,
+.BA,
+.CA {
+    border-left: white;
+}
+
+.AC,
+.BC,
+.CC {
+    border-right: white;
+}
+
+.AA,
+.AB,
+.AC {
+    border-top: white;
+}
+
+
+.A {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.B {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.C {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.AImg {
+    display: none;
+    position: absolute;
+    height: 90vh;
+    width: 2vh;
+
+    object-fit: cover;
+    z-index: 9;
+    margin-bottom: -10vh;
+}
+
+.AImgD {
+    display: none;
+    position: absolute;
+    transform: rotate(90deg);
+    height: 90vh;
+    width: 2vh;
+    object-fit: cover;
+    z-index: 9;
+    margin-bottom: -10vh;
+}
+
+.AImgS {
+    display: none;
+    position: absolute;
+    transform: rotate(-45deg);
+    top: -13%;
+    left: 145%;
+    height: 110vh;
+    width: 2vh;
+    object-fit: cover;
+    z-index: 9;
+    margin-bottom: -10vh;
+}
+
+.AImgMS {
+    display: none;
+    position: absolute;
+    transform: rotate(45deg);
+    top: -13%;
+    left: 154%;
+    height: 110vh;
+    width: 2vh;
+    object-fit: cover;
+    z-index: 9;
+    margin-bottom: -10vh;
+}
+
+.ZAImg {
+    display: none;
+    position: absolute;
+    /* Змінено на absolute, щоб займати позицію над .gameSquares */
+    /*top: 5%;*/
+    /*left: 10%;*/
+
+    height: 20vh;
+    width: 20vh;
+
+    object-fit: cover;
+    /* Змінено, якщо потрібно */
+    z-index: 2;
+    /* Значення z-index для зображення, щоб бути вищим за .gameSquares */
+    margin-bottom: -10vh;
+    /* Виправлення відступу, якщо потрібно */
+
+}
+
+.CAImg {
+    display: none;
+    position: absolute;
+    /* Змінено на absolute, щоб займати позицію над .gameSquares */
+
+
+    height: 20vh;
+    width: 20vh;
+
+    object-fit: cover;
+    /* Змінено, якщо потрібно */
+    z-index: 2;
+    /* Значення z-index для зображення, щоб бути вищим за .gameSquares */
+    margin-bottom: -10px;
+    /* Виправлення відступу, якщо потрібно */
+}
+
+/* .ImgAA {
+    display: none;
+    top: 5vh;
+    left: 5vh;
+}
+
+.ImgBA {
+    display: none;
+    top: 35vh;
+    left: 5vh;
+}
+
+.ImgCA {
+    display: none;
+    top: 65vh;
+    left: 5vh;
+}
+
+.ImgAB {
+    display: none;
+    top: 5vh;
+    left: 5vh;
+}
+
+.ImgВB {
+    display: none;
+    top: 35vh;
+    left: 5vh;
+}
+
+.ImgСB {
+    display: none;
+    top: 65vh;
+    left: 5vh;
+}
+
+.ImgAС {
+    display: none;
+    top: 5vh;
+    left: 5vh;
+}
+
+.ImgBС {
+    display: none;
+    top: 35vh;
+    left: 5vh;
+}
+
+.ImgCС {
+    display: none;
+    top: 65vh;
+    left: 5vh;
+} */
+
+.AA,
+.AB,
+.AC,
+.BA,
+.BB,
+.BC,
+.CA,
+.CB,
+.CC {
+
+    position: relative;
+    height: 30vh;
+    width: 30vh;
+
+}
+
+
+
+
+
+
+.Zero {
+    display: block;
+    position: absolute;
+    top: 1vh;
+    left: 1vh;
+    height: 25vh;
+    width: 25vh;
+
+
+
+    border-radius: 100px;
+    border: 1.3vh solid black;
+
+
+    animation-duration: 0.2s;
+    animation-name: slideinZero;
+
+}
+
+@keyframes slideinZero {
+    from {
+
+        top: 50%;
+        left: 50%;
+        height: 0;
+        width: 0;
+    }
+
+    to {
+        top: 1vh;
+        left: 1vh;
+        height: 25vh;
+        width: 25vh;
+    }
+}
+
+
+
+.Crosses {
+    display: block;
+    position: absolute;
+    cursor: pointer;
+    top: -1vh;
+    left: 2vh;
+    font-size: 28vh;
+
+    animation-duration: 0.2s;
+    animation-name: slideinCrosses;
+
+
+}
+
+
+
+@keyframes slideinCrosses {
+    from {
+        font-size: 0;
+        top: 50%;
+        left: 50%;
+    }
+
+    to {
+        font-size: 28vh;
+        top: -1vh;
+        left: 2vh;
+    }
+}
+
+
+
+@media (max-width: 480px) {
+    .playingField {
+        margin: 5px;
+        justify-content: left;
+        height: 100vh;
+        width: 100vh;
+    }
+
+    .AA,
+    .AB,
+    .AC,
+    .BA,
+    .BB,
+    .BC,
+    .CA,
+    .CB,
+    .CC {
+
+        position: relative;
+        height: 20vh;
+        width: 20vh;
+
+    }
+
+    .Zero {
+   
+        height: 15vh;
+        width: 15vh;
+    
+        animation-duration: 0.2s;
+        animation-name: slideinZero;
+    
+    }
+    
+    @keyframes slideinZero {
+        from {
+    
+            top: 50%;
+            left: 50%;
+            height: 0;
+            width: 0;
+        }
+    
+        to {
+            top: 1vh;
+            left: 1vh;
+            height: 15vh;
+            width: 15vh;
+        }
+    }
+    
+    
+    
+    .Crosses {
+        display: block;
+        position: absolute;
+        cursor: pointer;
+        top: -1vh;
+        left: 2vh;
+        font-size: 18vh;
+    
+        animation-duration: 0.2s;
+        animation-name: slideinCrosses;
+    
+    
+    }
+    
+    
+    
+    @keyframes slideinCrosses {
+        from {
+            font-size: 0;
+            top: 50%;
+            left: 50%;
+        }
+    
+        to {
+            font-size: 18vh;
+            top: -1vh;
+            left: 2vh;
+        }
+    }
+
+    .AImgD {
+        display: none;
+        position: absolute;
+        transform: rotate(90deg);
+        height: 90vh;
+        width: 2vh;
+        object-fit: cover;
+        z-index: 9;
+        margin-bottom: -10vh;
+    }
+    
+    .AImgS {
+        display: none;
+        position: absolute;
+        transform: rotate(-45deg);
+        top: -13%;
+        left: 145%;
+        height: 110vh;
+        width: 2vh;
+        object-fit: cover;
+        z-index: 9;
+        margin-bottom: -10vh;
+    }
+    
+    .AImgMS {
+        display: none;
+        position: absolute;
+        transform: rotate(45deg);
+        top: -13%;
+        left: 154%;
+        height: 110vh;
+        width: 2vh;
+        object-fit: cover;
+        z-index: 9;
+        margin-bottom: -10vh;
+    }
+}
