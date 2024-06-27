@@ -1,5 +1,7 @@
 window.onload = () => {
     $(document).ready(function () {
+
+       
         // $('.ZAImg.ImgAA').show();
 
         var walked = 0;
@@ -58,6 +60,11 @@ window.onload = () => {
                     }
 
                 }
+            }
+            else{
+                $('*').dblclick(function(event) {
+                    location.reload();
+                });
             }
 
             if (zeros.indexOf(".AA") !== -1 && zeros.indexOf(".BA") !== -1 && zeros.indexOf(".CA") !== -1 || crosses.indexOf(".AA") !== -1 && crosses.indexOf(".BA") !== -1 && crosses.indexOf(".CA") !== -1) {
