@@ -19,7 +19,6 @@ window.onload = () => {
             var thisClassInt = clas.indexOf("." + $(this).attr("class").substr(12, 14));
 
             if (game === 0) {
-                console.log(game);
                 if (thisClassInt !== -1) {
                     walked++
 
@@ -61,11 +60,15 @@ window.onload = () => {
 
                 }
             }
-            else{
+
+            if (game !== 0 || clas.length === 0){
                 $('*').dblclick(function(event) {
                     location.reload();
                 });
             }
+            
+            console.log(1);
+        
 
             if (zeros.indexOf(".AA") !== -1 && zeros.indexOf(".BA") !== -1 && zeros.indexOf(".CA") !== -1 || crosses.indexOf(".AA") !== -1 && crosses.indexOf(".BA") !== -1 && crosses.indexOf(".CA") !== -1) {
 
@@ -107,7 +110,7 @@ window.onload = () => {
                 $(".AImgCABBAC").show();
                 game = 1;
             }
-
+            
 
 
     
@@ -115,6 +118,8 @@ window.onload = () => {
 
 
         });
+
+        
 
     }
     )
