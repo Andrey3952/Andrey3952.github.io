@@ -264,8 +264,8 @@ window.onload = () => {
 
 
 
-
-                    if (walked % 2 !== 0 && menu == 1 || menu == 2) {
+if(menu == 1 || menu == 2){
+                    if (walked % 2 !== 0) {
 
                         crosses.push(thisClassString)
 
@@ -311,7 +311,7 @@ window.onload = () => {
 
                         win();
 
-                    } else if (menu == 1 || menu == 2) {
+                    } else  {
 
 
                         zeros.push(thisClassString);
@@ -357,6 +357,7 @@ window.onload = () => {
                         }
                         win();
                     }
+                }
 
                     
 
@@ -372,7 +373,47 @@ window.onload = () => {
 
         //if (game !== 0 || clas.length === 0){
         $('*').dblclick(function (event) {
-            location.reload();
+            //location.reload();
+
+            for (let i = 0; i < crosses.length; i++) {
+                clas.push(crosses[i]);
+                
+
+                var a = '.CAImg.Img' + crosses[i].substr(1, 2);
+
+                $(a).hide();
+
+                crosses.splice(i,1);
+
+            }
+
+             for (let i = 0; i < zeros.length; i++) {
+                clas.push(zeros[i]);
+                
+
+                var a = '.ZAImg.Img' + zeros[i].substr(1, 2);
+
+                $(a).hide();
+
+                zeros.splice(i,1);
+
+            }
+
+            walked = 0;
+            game = 0;
+
+             $(".AImgAABACA").hide();
+             $(".AImgABBBCB").hide();
+             $(".AImgACBCCC").hide();
+             $(".AImgCACBCC").hide();
+             $(".AImgBABBBC").hide();
+             $(".AImgAAABAC").hide();
+             $(".AImgAABBCC").hide();
+             $(".AImgCABBAC").hide();
+
+             $("#blocker").hide();
+
+
 
 
         });
