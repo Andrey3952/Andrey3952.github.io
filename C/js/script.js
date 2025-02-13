@@ -276,7 +276,6 @@ if(menu == 1 || menu == 2){
 
                             if (thisClassString === crosses[i]) {
                                 var a = '.CAImg.Img' + crosses[i].substr(1, 2);
-
                                 $(a).addClass('Crosses');
                                 $(a).show();
 
@@ -374,6 +373,7 @@ if(menu == 1 || menu == 2){
         //if (game !== 0 || clas.length === 0){
         $('*').dblclick(function (event) {
             //location.reload();
+            $('.op').removeClass('op');
 
             for (let i = 0; i < crosses.length; i++) {
                 clas.push(crosses[i]);

@@ -9,6 +9,15 @@
 
 }
 
+
+.refresh-icon::before {
+  content: "⟳";
+  font-size: 60px;
+  color: #000;
+}
+
+
+
 #blocker {
     position: fixed;
     top: 0;
