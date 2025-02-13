@@ -279,6 +279,9 @@
 }
 
 
+.op {
+    opacity: 0.5; /* 50% прозорості */
+}
 
 
 
@@ -299,7 +302,12 @@
 
     animation-duration: 0.2s;
     animation-name: slideinZero;
+    
 
+}
+
+.h{
+    animation: fadeOut 1s forwards;
 }
 
 @keyframes slideinZero {
@@ -319,6 +327,16 @@
     }
 }
 
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+        transform: scale(1);
+    }
+    to {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+}
 
 
 .Crosses {

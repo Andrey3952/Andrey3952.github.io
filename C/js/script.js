@@ -12,12 +12,19 @@ window.onload = () => {
         var zeros = [];
         var game = 0;
 
-
+        
+       
         $(clas.join()).click(function (event) {
+
+        
+            
+
+            
 
             var thisClassString = clas[clas.indexOf("." + $(this).attr("class").substr(12, 14))];
             var thisClassInt = clas.indexOf("." + $(this).attr("class").substr(12, 14));
 
+            
             if (game === 0) {
                 if (thisClassInt !== -1) {
                     walked++
@@ -26,23 +33,69 @@ window.onload = () => {
 
                         crosses.push(thisClassString);
 
+                       
 
+                        // if(crosses.length == 4){
+                        //     crosses.shift();
+                        // }
+
+                       
+                        
                         for (let i = 0; i < crosses.length; i++) {
+                            
+                           
 
                             if (thisClassString === crosses[i]) {
                                 var a = '.CAImg.Img' + crosses[i].substr(1, 2);
 
                                 $(a).addClass('Crosses');
+                                $(a).show();
 
 
+                                
+                                
                                 clas.splice(thisClassInt, 1);
-
+                                
                             }
+
+                            
                         }
+                       // console.log("crosses ",crosses);
+                        //console.log("clas ",clas);
+                        if (crosses.length == 4){
+                            // Видаляємо клас 'myClass' з усіх елементів
+                            $('.op').removeClass('op');
+
+                            //console.log(clas);
+                            clas.push(crosses[0]);
+                           // console.log(clas);
+                            var b = '.CAImg.Img' + crosses[0].substr(1, 2);
+                        
+                            $(b).hide();
+
+                            $(b).removeClass('thisClassString')
+                         
+                            crosses.shift();
+
+                            if(zeros.length==3){
+                                var a = '.ZAImg.Img' + zeros[0].substr(1, 2)+'.Zero';
+                                $(a).addClass('op');
+                               // console.log(1);
+                            }
+    
+                            
+                        }
+
+                       // console.log('-');
+                       // console.log("crosses ",crosses);
+                       // console.log("clas ",clas);
 
 
                     } else {
+
+                        
                         zeros.push(thisClassString);
+                        
 
 
                         for (let i = 0; i < zeros.length; i++) {
@@ -50,24 +103,47 @@ window.onload = () => {
                             if (thisClassString === zeros[i]) {
                                 var a = '.ZAImg.Img' + zeros[i].substr(1, 2);
                                 $(a).addClass('Zero');
+                                $(a).show();
 
+                                if (zeros.length == 4){
+                                    $('.op').removeClass('op');
+                                    clas.push(zeros[0]);
+                                    var b = '.ZAImg.Img' + zeros[0].substr(1, 2);
 
+                                    
+                                
+                                    $(b).hide();
+
+                                    $(b).removeClass('thisClassString')
+                                 
+                                    zeros.shift();
+                                }
+                                
                                 clas.splice(thisClassInt, 1);
 
                             }
+                        }
+                        
+                        
+                        if(crosses.length==3){
+                            var a = '.CAImg.Img' + crosses[0].substr(1, 2)+'.Crosses';
+                           
+                            $(a).addClass('op');
+                           console.log(1);
                         }
                     }
 
                 }
             }
 
-            if (game !== 0 || clas.length === 0){
-                $('*').dblclick(function(event) {
-                    location.reload();
-                });
-            }
+            // if (game !== 0 || clas.length === 0){
+            //     $('*').click(function(event) {
+            //         location.reload();
+            //     });
+
+            // }
             
-            console.log(1);
+           
         
 
             if (zeros.indexOf(".AA") !== -1 && zeros.indexOf(".BA") !== -1 && zeros.indexOf(".CA") !== -1 || crosses.indexOf(".AA") !== -1 && crosses.indexOf(".BA") !== -1 && crosses.indexOf(".CA") !== -1) {
@@ -110,13 +186,12 @@ window.onload = () => {
                 $(".AImgCABBAC").show();
                 game = 1;
             }
+                
+console.log();
+console.log(zeros.length);
+console.log(crosses.length);
             
-
-
-    
-
-
-
+           
         });
 
         
