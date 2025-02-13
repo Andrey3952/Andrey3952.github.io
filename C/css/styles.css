@@ -9,6 +9,18 @@
 
 }
 
+#blocker {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0); /* Трохи затемнює екран */
+    z-index: 9999;
+    display: none;
+}
+
+
 .gameSquares {
     /* height: 30vh;
     width: 30vh; */
@@ -284,7 +296,9 @@
 }
 
 
-
+.none{
+    display: none;
+}
 
 .Zero {
     display: block;
