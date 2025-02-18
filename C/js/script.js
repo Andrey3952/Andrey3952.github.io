@@ -188,45 +188,79 @@ window.onload = () => {
 
                             var thisClassIntR = Math.floor(Math.random() * clas.length);
                             var thisClassStringR = clas[thisClassIntR];
-                            
+
+
+
 
 
                             var thisKyIntR = Math.floor(Math.random() * ky.length);
                             var thisKyStringR = ky[thisKyIntR];
 
-                            
+
                             for (i = 0; i < ky.length; i++) {
                                 if (clas.indexOf(ky[i]) !== -1) {
-                                    thisClassStringR = clas[clas.indexOf(thisKyStringR)];
-                                    thisClassIntR = clas.indexOf(thisKyStringR);
-                                    
-                                    
-                                    
+                                    thisClassStringR = ky[i];
+                                    thisClassIntR = clas.indexOf(ky[i]);
+
+                                    console.log(thisClassStringR);
+
                                 }
-                                
-                               
+
+
                             }
+                            // 
+                            // console.log(clas[thisClassIntR]);
 
                             if (clas.indexOf(".BB") !== -1) {
-                                thisClassStringR = clas[clas.indexOf(".BB")];
+                                thisClassStringR = ".BB";
                                 thisClassIntR = clas.indexOf(".BB");
-                                
+
                             }
 
-                            if (clas.length === 6){
-                                a = Math.floor(Math.random() * 2)
-                                console.log(a);
 
-                                if(a === 1){
-                                    thisClassStringR = clas[clas.indexOf(".BA")];
-                                    thisClassIntR = clas.indexOf(".BA");
-                                }
 
-                                else{
-                                    thisClassStringR = clas[clas.indexOf(".BC")];
-                                    thisClassIntR = clas.indexOf(".BC");
+                            // if (clas.length === 6 && (clas.indexOf(".BA") !== -1 || clas.indexOf(".BC") !== -1)) {
+
+                            //     a = Math.floor(Math.random() * 2)
+
+
+                            //     a = 2;
+                            //     console.log((a === 1 && clas.indexOf(".BA") !== -1) === false);
+                            //     if (clas.indexOf(".BA") !== -1) {
+                            //         if (a === 1) {
+                            //             thisClassStringR = ".BA";
+                            //             thisClassIntR = clas.indexOf(".BA");
+
+                            //         }
+                            //     }
+
+                            //     else {
+                            //         thisClassStringR = ".BC";
+                            //         thisClassIntR = clas.indexOf(".BC");
+                            //         console.log(a);
+                            //     }
+
+                            // }
+
+                            if (clas.length === 6) {
+                                if ((crosses.indexOf('.AA') !== -1 && crosses.indexOf('.CC') !== -1) || (crosses.indexOf('.AC') !== -1 && crosses.indexOf('.CA') !== -1)) {
+                                    a = Math.floor(Math.random() * 2)
+                                    console.log(a)
+
+                                    if (a === 0) {
+                                        thisClassStringR = ".BA";
+                                        thisClassIntR = clas.indexOf(".BA");
+
+                                    }
+                                    else {
+                                        thisClassStringR = ".BC";
+                                        thisClassIntR = clas.indexOf(".BC");
+                                    }
+
                                 }
                             }
+
+
 
 
 
@@ -238,8 +272,8 @@ window.onload = () => {
                                     thisClassStringR = clas[i];
                                     thisClassIntR = i;
                                     crosses.pop();
-                                    
-                                    
+
+
                                     break;
                                 }
                                 crosses.pop();
@@ -251,16 +285,16 @@ window.onload = () => {
 
                             for (i = 0; i < clas.length; i++) {
 
-                                
-                                
-                                    
-                                    
+
+
+
+
                                 zeros.push(clas[i]);
                                 if (win() !== 0 && menu == 3) {
                                     thisClassStringR = clas[i];
                                     thisClassIntR = i;
-                                    
-                                    
+
+
                                     zeros.pop();
                                     break;
                                 }
@@ -268,14 +302,14 @@ window.onload = () => {
                                 zeros.pop();
 
                             }
-                            
+
 
                             console.log("--------");
-                            
 
-                           
 
-                            
+
+
+
 
 
 
@@ -303,22 +337,22 @@ window.onload = () => {
 
 
 
+
                                 var b = '.ZAImg.Img' + thisClassStringR.substr(1, 2);
                                 $(b).addClass('Zero').show();
 
                                 // Видаляємо елемент з масиву clas після використання
-                                // console.log(thisClassStringR);
-                                // console.log(clas[thisClassIntR]);
 
-                               
-                               
+
+
+
                                 zeros.push(clas[thisClassIntR]);
                                 clas.splice(thisClassIntR, 1);
-                                
 
 
 
-                                
+
+
 
 
                                 // clas.indexOf(".BB") 
