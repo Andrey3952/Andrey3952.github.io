@@ -202,7 +202,7 @@ window.onload = () => {
                                     thisClassStringR = ky[i];
                                     thisClassIntR = clas.indexOf(ky[i]);
 
-                                    console.log(thisClassStringR);
+                                    
 
                                 }
 
@@ -245,7 +245,7 @@ window.onload = () => {
                             if (clas.length === 6) {
                                 if ((crosses.indexOf('.AA') !== -1 && crosses.indexOf('.CC') !== -1) || (crosses.indexOf('.AC') !== -1 && crosses.indexOf('.CA') !== -1)) {
                                     a = Math.floor(Math.random() * 2)
-                                    console.log(a)
+                                    
 
                                     if (a === 0) {
                                         thisClassStringR = ".BA";
@@ -304,8 +304,7 @@ window.onload = () => {
                             }
 
 
-                            console.log("--------");
-
+                            
 
 
 
