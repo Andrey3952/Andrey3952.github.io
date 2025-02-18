@@ -592,11 +592,57 @@ window.onload = () => {
 
         //if (game !== 0 || clas.length === 0){
         $('*').dblclick(function (event) {
-            location.reload();
+            //break;
+            // location.reload();
+            walked = 0;
+            clas = ['.AA', '.AB', '.AC',
+                '.BA', '.BB', '.BC',
+                '.CA', '.CB', '.CC'];
+            crosses = [];
+            zeros = [];
+
+            for (i = 0; i < clas.length; i++) {
+                // $('.op').removeClass('op');
+
+                // clas.push(crosses[0]);
+                // var b = '.CAImg.Img' + crosses[0].substr(1, 2);
+                // $(b).hide();
+                // $(b).removeClass('thisClassString');
+                // crosses.shift();
+
+                // var a = '.ZAImg.Img' + zeros[0].substr(1, 2) + '.Zero';
+                // $(a).addClass('op');
+
+                var a = '.ZAImg.Img' + clas[i].substr(1, 2) + '.Zero';
+                $(a).hide();
+
+                var b = '.CAImg.Img' + clas[i].substr(1, 2) + '.Crosses';
+                $(b).hide();
+
+
+
+                $(".AImgAABACA").hide();
+
+                $(".AImgABBBCB").hide();
+
+                $(".AImgACBCCC").hide();
+
+                $(".AImgCACBCC").hide();
+
+                $(".AImgAAABAC").hide();
+
+                $(".AImgBABBBC").hide();
+
+                $(".AImgAABBCC").hide();
+
+                $(".AImgCABBAC").hide();
+            }
+
 
 
         });
         //}
+
 
 
     }
