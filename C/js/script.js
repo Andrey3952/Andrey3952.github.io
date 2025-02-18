@@ -199,7 +199,7 @@ window.onload = () => {
                                 if (clas.indexOf(ky[i]) !== -1) {
                                     thisClassStringR = clas[clas.indexOf(thisKyStringR)];
                                     thisClassIntR = clas.indexOf(thisKyStringR);
-                                    console.log("кут");
+                                    
                                     
                                     
                                 }
@@ -210,7 +210,22 @@ window.onload = () => {
                             if (clas.indexOf(".BB") !== -1) {
                                 thisClassStringR = clas[clas.indexOf(".BB")];
                                 thisClassIntR = clas.indexOf(".BB");
-                                console.log("центр");
+                                
+                            }
+
+                            if (clas.length === 6){
+                                a = Math.floor(Math.random() * 2)
+                                console.log(a);
+
+                                if(a === 1){
+                                    thisClassStringR = clas[clas.indexOf(".BA")];
+                                    thisClassIntR = clas.indexOf(".BA");
+                                }
+
+                                else{
+                                    thisClassStringR = clas[clas.indexOf(".BC")];
+                                    thisClassIntR = clas.indexOf(".BC");
+                                }
                             }
 
 
@@ -224,8 +239,7 @@ window.onload = () => {
                                     thisClassIntR = i;
                                     crosses.pop();
                                     
-                                    console.log("перекрив");
-
+                                    
                                     break;
                                 }
                                 crosses.pop();
@@ -245,7 +259,7 @@ window.onload = () => {
                                 if (win() !== 0 && menu == 3) {
                                     thisClassStringR = clas[i];
                                     thisClassIntR = i;
-                                    console.log("виграв");
+                                    
                                     
                                     zeros.pop();
                                     break;
@@ -259,8 +273,7 @@ window.onload = () => {
                             console.log("--------");
                             
 
-                            console.log(clas[thisClassIntR]);
-                            console.log(thisClassStringR);
+                           
 
                             
 
