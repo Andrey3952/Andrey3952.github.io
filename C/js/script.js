@@ -601,6 +601,8 @@ window.onload = () => {
             crosses = [];
             zeros = [];
 
+            $("#blocker").hide();
+
             for (i = 0; i < clas.length; i++) {
                 // $('.op').removeClass('op');
 
