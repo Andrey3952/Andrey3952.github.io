@@ -10,50 +10,52 @@ window.onload = () => {
             '.CA', '.CB', '.CC'];
         var crosses = [];
         var zeros = [];
+        var ky = ['.AA', '.AC', '.CA', '.CC']
         var game = 0;
         var menu = 0;
 
         function win() {
 
             if (zeros.indexOf(".AA") !== -1 && zeros.indexOf(".BA") !== -1 && zeros.indexOf(".CA") !== -1 || crosses.indexOf(".AA") !== -1 && crosses.indexOf(".BA") !== -1 && crosses.indexOf(".CA") !== -1) {
-
-                $(".AImgAABACA").show();
-                game = 1;
+                return 1;
             }
 
             else if (zeros.indexOf(".AB") !== -1 && zeros.indexOf(".BB") !== -1 && zeros.indexOf(".CB") !== -1 || crosses.indexOf(".AB") !== -1 && crosses.indexOf(".BB") !== -1 && crosses.indexOf(".CB") !== -1) {
-                $(".AImgABBBCB").show();
-                game = 1;
+                return 2;
             }
 
             else if (zeros.indexOf(".AC") !== -1 && zeros.indexOf(".BC") !== -1 && zeros.indexOf(".CC") !== -1 || crosses.indexOf(".AC") !== -1 && crosses.indexOf(".BC") !== -1 && crosses.indexOf(".CC") !== -1) {
-                $(".AImgACBCCC").show();
-                game = 1;
+
+                return 3;
             }
 
             else if (zeros.indexOf(".CA") !== -1 && zeros.indexOf(".CB") !== -1 && zeros.indexOf(".CC") !== -1 || crosses.indexOf(".CA") !== -1 && crosses.indexOf(".CB") !== -1 && crosses.indexOf(".CC") !== -1) {
-                $(".AImgCACBCC").show();
-                game = 1;
+
+                return 4;
             }
 
             else if (zeros.indexOf(".AA") !== -1 && zeros.indexOf(".AB") !== -1 && zeros.indexOf(".AC") !== -1 || crosses.indexOf(".AA") !== -1 && crosses.indexOf(".AB") !== -1 && crosses.indexOf(".AC") !== -1) {
-                $(".AImgAAABAC").show();
-                game = 1;
+
+                return 5;
             }
 
             else if (zeros.indexOf(".BA") !== -1 && zeros.indexOf(".BB") !== -1 && zeros.indexOf(".BC") !== -1 || crosses.indexOf(".BA") !== -1 && crosses.indexOf(".BB") !== -1 && crosses.indexOf(".BC") !== -1) {
-                $(".AImgBABBBC").show();
-                game = 1;
+
+                return 6;
             }
 
             else if (zeros.indexOf(".AA") !== -1 && zeros.indexOf(".BB") !== -1 && zeros.indexOf(".CC") !== -1 || crosses.indexOf(".AA") !== -1 && crosses.indexOf(".BB") !== -1 && crosses.indexOf(".CC") !== -1) {
-                $(".AImgAABBCC").show();
-                game = 1;
+
+                return 7;
             }
 
             else if (zeros.indexOf(".CA") !== -1 && zeros.indexOf(".BB") !== -1 && zeros.indexOf(".AC") !== -1 || crosses.indexOf(".CA") !== -1 && crosses.indexOf(".BB") !== -1 && crosses.indexOf(".AC") !== -1) {
-                $(".AImgCABBAC").show();
-                game = 1;
+
+                return 8;
+            }
+
+            else {
+                return 0;
             }
         }
 
@@ -94,7 +96,7 @@ window.onload = () => {
             var thisClassInt = clas.indexOf("." + $(this).attr("class").substr(12, 14));
 
 
-            if (game === 0) {
+            if (win() === 0) {
                 if (thisClassInt !== -1) {
                     walked++
 
@@ -148,7 +150,7 @@ window.onload = () => {
 
 
                     if (menu == 3 || menu == 4) {
-                        console.log(clas);
+                        // console.log(clas);
                         $("#blocker").show();
                         // Додаємо елемент до масиву crosses, якщо його ще немає
                         if (!crosses.includes(thisClassString)) {
@@ -181,17 +183,105 @@ window.onload = () => {
 
                         win();
 
-                        if (clas.length > 0 && game === 0) {
+                        if (clas.length > 0 && win() === 0) {
 
 
                             var thisClassIntR = Math.floor(Math.random() * clas.length);
                             var thisClassStringR = clas[thisClassIntR];
+                            
+
+
+                            var thisKyIntR = Math.floor(Math.random() * ky.length);
+                            var thisKyStringR = ky[thisKyIntR];
+
+                            
+                            for (i = 0; i < ky.length; i++) {
+                                if (clas.indexOf(ky[i]) !== -1) {
+                                    thisClassStringR = clas[clas.indexOf(thisKyStringR)];
+                                    thisClassIntR = clas.indexOf(thisKyStringR);
+                                    console.log("кут");
+                                    
+                                    
+                                }
+                                
+                               
+                            }
+
+                            if (clas.indexOf(".BB") !== -1) {
+                                thisClassStringR = clas[clas.indexOf(".BB")];
+                                thisClassIntR = clas.indexOf(".BB");
+                                console.log("центр");
+                            }
+
+
+
+
+
+                            for (i = 0; i < clas.length; i++) {
+                                crosses.push(clas[i]);
+                                if (win() !== 0 && menu == 3) {
+                                    thisClassStringR = clas[i];
+                                    thisClassIntR = i;
+                                    crosses.pop();
+                                    
+                                    console.log("перекрив");
+
+                                    break;
+                                }
+                                crosses.pop();
+
+
+                            }
+
+
+
+                            for (i = 0; i < clas.length; i++) {
+
+                                
+                                
+                                    
+                                    
+                                zeros.push(clas[i]);
+                                if (win() !== 0 && menu == 3) {
+                                    thisClassStringR = clas[i];
+                                    thisClassIntR = i;
+                                    console.log("виграв");
+                                    
+                                    zeros.pop();
+                                    break;
+                                }
+
+                                zeros.pop();
+
+                            }
+                            
+
+                            console.log("--------");
+                            
+
+                            console.log(clas[thisClassIntR]);
+                            console.log(thisClassStringR);
+
+                            
+
+
+
+
+
+
+
+
+
+
 
                             // Додаємо елемент до масиву zeros, якщо його ще немає
-                            if (!zeros.includes(thisClassStringR)) {
-                                zeros.push(thisClassStringR);
-                            }
+                            // if (!zeros.includes(thisClassStringR)) {
+                            //     zeros.push(thisClassStringR);
+                            // }
                             setTimeout(function () {
+
+
+
                                 $("#blocker").hide();
                                 //$("body").css("pointer-events", "auto");
                                 // Генеруємо випадковий елемент з масиву clas
@@ -204,38 +294,50 @@ window.onload = () => {
                                 $(b).addClass('Zero').show();
 
                                 // Видаляємо елемент з масиву clas після використання
+                                // console.log(thisClassStringR);
+                                // console.log(clas[thisClassIntR]);
+
+                               
+                               
+                                zeros.push(clas[thisClassIntR]);
                                 clas.splice(thisClassIntR, 1);
-
-                                console.log(thisClassStringR);
-
-
-                           
-
-
-                            if (zeros.length == 4 && menu == 4) {
-                                $('.op').removeClass('op');
-                                clas.push(zeros[0]);
-                                var b = '.ZAImg.Img' + zeros[0].substr(1, 2);
+                                
 
 
 
-                                $(b).hide();
+                                
 
-                                $(b).removeClass('thisClassString')
 
-                                zeros.shift();
-                            }
+                                // clas.indexOf(".BB") 
 
-                            if (crosses.length == 3 && menu == 4) {
-                                var a = '.CAImg.Img' + crosses[0].substr(1, 2) + '.Crosses';
 
-                                $(a).addClass('op');
 
-                            }
-                        }, 600); // 1000 мілісекунд = 1 секунди
-                        setTimeout(function () {
-                            win();
-                        }, 700);
+
+                                if (zeros.length == 4 && menu == 4) {
+                                    $('.op').removeClass('op');
+                                    clas.push(zeros[0]);
+                                    var b = '.ZAImg.Img' + zeros[0].substr(1, 2);
+
+
+
+                                    $(b).hide();
+
+                                    $(b).removeClass('thisClassString')
+
+                                    zeros.shift();
+                                }
+
+                                if (crosses.length == 3 && menu == 4) {
+                                    var a = '.CAImg.Img' + crosses[0].substr(1, 2) + '.Crosses';
+
+                                    $(a).addClass('op');
+
+                                }
+                                // console.log(zeros);
+                            }, 600); // 1000 мілісекунд = 1 секунди
+                            setTimeout(function () {
+                                win();
+                            }, 700);
 
                         }
                     }
@@ -264,8 +366,8 @@ window.onload = () => {
 
 
 
-if(menu == 1 || menu == 2){
-                    if (walked % 2 !== 0) {
+
+                    if (walked % 2 !== 0 && menu == 1 || menu == 2) {
 
                         crosses.push(thisClassString)
 
@@ -276,6 +378,7 @@ if(menu == 1 || menu == 2){
 
                             if (thisClassString === crosses[i]) {
                                 var a = '.CAImg.Img' + crosses[i].substr(1, 2);
+
                                 $(a).addClass('Crosses');
                                 $(a).show();
 
@@ -310,7 +413,7 @@ if(menu == 1 || menu == 2){
 
                         win();
 
-                    } else  {
+                    } else if (menu == 1 || menu == 2) {
 
 
                         zeros.push(thisClassString);
@@ -330,6 +433,8 @@ if(menu == 1 || menu == 2){
 
 
                             }
+
+
                         }
 
                         if (menu == 2) {
@@ -356,14 +461,82 @@ if(menu == 1 || menu == 2){
                         }
                         win();
                     }
-                }
 
-                    
+
 
 
 
                 }
             }
+
+            if (menu == 3 || menu == 4) {
+
+
+                setTimeout(function () {
+
+
+
+                    switch (win()) {
+                        case 1:
+                            $(".AImgAABACA").show();
+                            break;
+                        case 2:
+                            $(".AImgABBBCB").show();
+                            break;
+                        case 3:
+                            $(".AImgACBCCC").show();
+                            break;
+                        case 4:
+                            $(".AImgCACBCC").show();
+                            break;
+                        case 5:
+                            $(".AImgAAABAC").show();
+                            break;
+                        case 6:
+                            $(".AImgBABBBC").show();
+                            break;
+                        case 7:
+                            $(".AImgAABBCC").show();
+                            break;
+                        case 8:
+                            $(".AImgCABBAC").show();
+                            break;
+                    }
+
+                }, 1000);
+
+            }
+
+            else {
+                switch (win()) {
+                    case 1:
+                        $(".AImgAABACA").show();
+                        break;
+                    case 2:
+                        $(".AImgABBBCB").show();
+                        break;
+                    case 3:
+                        $(".AImgACBCCC").show();
+                        break;
+                    case 4:
+                        $(".AImgCACBCC").show();
+                        break;
+                    case 5:
+                        $(".AImgAAABAC").show();
+                        break;
+                    case 6:
+                        $(".AImgBABBBC").show();
+                        break;
+                    case 7:
+                        $(".AImgAABBCC").show();
+                        break;
+                    case 8:
+                        $(".AImgCABBAC").show();
+                        break;
+                }
+            }
+
+
 
 
 
@@ -372,48 +545,7 @@ if(menu == 1 || menu == 2){
 
         //if (game !== 0 || clas.length === 0){
         $('*').dblclick(function (event) {
-            //location.reload();
-            $('.op').removeClass('op');
-
-            for (let i = 0; i < crosses.length; i++) {
-                clas.push(crosses[i]);
-                
-
-                var a = '.CAImg.Img' + crosses[i].substr(1, 2);
-
-                $(a).hide();
-
-                crosses.splice(i,1);
-
-            }
-
-             for (let i = 0; i < zeros.length; i++) {
-                clas.push(zeros[i]);
-                
-
-                var a = '.ZAImg.Img' + zeros[i].substr(1, 2);
-
-                $(a).hide();
-
-                zeros.splice(i,1);
-
-            }
-
-            walked = 0;
-            game = 0;
-
-             $(".AImgAABACA").hide();
-             $(".AImgABBBCB").hide();
-             $(".AImgACBCCC").hide();
-             $(".AImgCACBCC").hide();
-             $(".AImgBABBBC").hide();
-             $(".AImgAAABAC").hide();
-             $(".AImgAABBCC").hide();
-             $(".AImgCABBAC").hide();
-
-             $("#blocker").hide();
-
-
+            location.reload();
 
 
         });
