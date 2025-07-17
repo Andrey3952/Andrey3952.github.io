@@ -65,10 +65,13 @@ window.onload = () => {
         let filter = input.value.toUpperCase();
         let ul = document.getElementById("list");
         let li = ul.getElementsByTagName("li");
+		let l;
 
 
         // let listIF = document.querySelectorAll('.istorichniFotoPage li');
         // console.log(ul);
+		
+		
 
 
         // Перебирайте все элементы списка и скрывайте те, которые не соответствуют поисковому запросу
@@ -78,16 +81,27 @@ window.onload = () => {
 
 
                 if (a.innerHTML.toUpperCase().indexOf(filter) == -1) {
-                    li[i].classList.add('hide');
+                   li[i].classList.add('hide');
+				   l = document.getElementsByClassName("hide");
+				   console.log(l.length);
+				   if(l.length == 37){
+					   $('.in').show();
+				   }else{
+					       $('.in').hide();
+				   }
+					   
+
+					
                     // li[i].style.display = "";
                 } else {
                     // li[i].style.display = "none";
                     li[i].classList.remove('hide');
+					
                 }
                 $('#cross').click(function(event) {
                     li[i].classList.remove('hide');
+					
                 });
-
 
             }
         }
@@ -97,70 +111,7 @@ window.onload = () => {
     document.addEventListener('keyup', search);
 
 
-    // let input = document.querySelector('#input');
-    // input.oninput = function () {
-    //     let valu = this.value.trim();
-    //     let value = valu.toUpperCase();
-    //     let list = document.querySelectorAll('.mainPage li');
-    //     let listIF = document.querySelectorAll('.istorichniFotoPage li');
-
-
-    //     if (value != '') {
-
-    //         listIF.forEach(elem => {
-
-    //             if (elem.innerText.search(value) == -1) {
-    //                 elem.classList.add('hide')
-    //             }
-    //             $('h1').click(function (event) {
-    //                 $('#input').val('');
-    //                 elem.classList.remove('hide');
-    //                 $('.in').hide();
-    //             });
-    //         });
-
-
-
-
-
-
-
-
-
-
-
-    //         list.forEach(elem => {
-    //             console.log(list);
-
-    //             if (elem.innerText.search(value) == -1) {
-    //                 elem.classList.add('hide')
-    //             }
-    //             $('h1').click(function (event) {
-    //                 $('#input').val('');
-    //                 elem.classList.remove('hide');
-    //                 $('.in').hide();
-    //             });
-    //         });
-    //     } else {
-    //         list.forEach(elem => {
-    //             elem.classList.remove('hide');
-    //         });
-
-    //         listIF.forEach(elem => {
-    //             elem.classList.remove('hide');
-    //         });
-    //     }
-    //     if ($('.hide').length == Object.keys(list).length) {
-    //         $('.in').show();
-
-    //     } else {
-    //         $('.in').hide();
-
-    //     }
-    // }
-
-    //------------------------------------------------------------------------------------------------------------------------------
-
+   
     setTimeout(() => {
         // document.footer.classList.add('loaded');
         $('footer').toggleClass('loaded');

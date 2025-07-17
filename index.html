@@ -1,65 +1,82 @@
-<!DOCTYPE html>
-<html lang="en">
+<!-- стрелку верх переделать -->
+<!-- Object.keys(document.querySelectorAll('.mainPage li')).length Київ -->
+
+<!DOCTYPE HTML>
+<html>
 
 <head>
-    <meta name="description" content="Старовинний Київ: Місця та Історії">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" id="logo" href="logo/chestnut-leaf-465729.webp" type="image/x-icon">
     <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="../logo/chestnut-leaf-465729.webp" type="image/x-icon">
-
-    <link rel="stylesheet" href="../css/styles.css">
+	
+	<meta name="description" content="Старовинний Київ: Місця та Історії">
+	
+    <link rel="stylesheet" href="css/styles.css">
     <script src="https://code.jquery.com/jquery-3.6.0.slim.js"></script>
-    <script src="../js/script.js"></script>
     <script src="https://kit.fontawesome.com/5f00d71aea.js" crossorigin="anonymous"></script>
 
-    <!-- <script src="../js/IF.js"></script> -->
-
-    <title> Історичні фотографії </title>
+    <title>Київ</title>
 </head>
 
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-XWPG8TK4CL"></script>
 <script>
-    window.dataLayer = window.dataLayer || [];
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
-    function gtag() {
-        dataLayer.push(arguments);
-    }
-    gtag('js', new Date());
-
-    gtag('config', 'G-XWPG8TK4CL');
+  gtag('config', 'G-XWPG8TK4CL');
 </script>
 
+
+	
 <body>
 
+    <!-- <script src="js/Kyiv.js"></script> -->
+    <script src="js/script.js"></script>
 
-    <!-- Меню -->
+
+    <!-- <script src="js/preloader.js"></script> -->
+
+
+
+
+
+
     <header class="header">
         <div class="container">
             <div class="header_body">
-                <a class="h1 h1IstorichniFoto" href="#">
-                    <span>
-                        <h1 class="h1IF">Історичні фотографії</h1>
-                    </span>
+                <a class="h1" href="#">
+                    <h1 class="h1 BK">Київ</h1>
                 </a>
+                <!-- <h1 class="h1IstorichniFoto">Історичні фотографії</h1> -->
                 <div class="header_burger">
                     <span></span>
                 </div>
-                <div class="header_menu">
+
+                <nav class="header_menu">
+
+
+
+
+                    <!-- <input type="text" id="input" class="input" title="City where you were born." /> -->
                     <span class="inp">
-                        <input type="text" class="input" id="input">
-    
-                        <i id="cross" class="fa-solid fa-xmark fa-lg"></i>
-    
-                        <i id="arrow" class="fa-solid fa-arrow-right fa-lg"></i>
-                        </span>
+                    <input type="text" class="input" id="input">
 
+                    <i id="cross" class="fa-solid fa-xmark fa-lg"></i>
 
+                    <i id="arrow" class="fa-solid fa-arrow-right fa-lg"></i>
+                    </span>
 
                     <ul class="header_list">
-                        <li class="list_menuLi"><a class="list_menuAIFPK " href="../index.html">Київ</a></li>
-                        <br><br><br>
+                        <li class="list_menuLi"><a class="list_menuAIFPK " href="istorichniFoto/index.html">
+								Історичні фотографії
+
+
+                                
+							</a></li>
+<br><br><br>
                             <li class="list_menuLi"><a class="list_menuAIFPK " href="https://docs.google.com/forms/d/e/1FAIpQLSefg1WQcgpmeh6dEuB9NxFPXOKGpb9V7JF3dRIiLULUSU-Gww/viewform?usp=header" target="_blank">
 								Залишити відгук
 
@@ -68,107 +85,551 @@
 							</a></li>
 
                     </ul>
-                    </nav>
-                </div>
-            </div>
-    </header>
-
-    <!-- Список сторінок -->
-    <div class="con"></div>
-    <div id="scrolTop" class="isShowBtn isShowBtn_hide ">
-        <i class="icon-caret-up"></i>
-    </div>
-    <main>
-        <div class="wrapper">
-
-
-            <div id="list" class="istorichniFotoPage">
-
-                <li>
-                    <p class="pInput">Андріївський Узвіз</p>
-                    <article id="Andrew_DescentIFP PIFP">
-                        <div class="polaroidIFP  ">
-                            <a href="detailIFP/Andrew_DescentIFP.html">
-                                <div class=" containerIF">
-                                    <h2> Андріївський Узвіз </h2>
-                                </div>
-                        </div>
-                    </article>
-                </li>
-
-                <li>
-                    <p class="pInput">Київський фунікулер</p>
-                    <article id="FunicularIFP PIFP">
-                        <div class="polaroidIFP  ">
-                            <a href="detailIFP/FunicularIFP.html">
-                                <div class=" containerIF">
-                                    <h2> Київський фунікулер </h2>
-                                </div>
-                        </div>
-                    </article>
-                </li>
-
-                <li>
-                    <p class="pInput">Хрещатик</p>
-                    <article id="kreshatikIFP PIFP">
-                        <div class="polaroidIFP  ">
-                            <a href="detailIFP/kreshatikIFP.html">
-                                <div class=" containerIF">
-                                    <h2> Хрещатик </h2>
-                                </div>
-                        </div>
-                    </article>
-                </li>
-
-                <li>
-                    <p class="pInput">Золоті ворота</p>
-                    <article id="Golden_GateIFP PIFP">
-                        <div class="polaroidIFP">
-                            <a href="detailIFP/Golden_GateIFP.html">
-                                <div class="containerIF">
-                                    <h2> Золоті ворота </h2>
-                                </div>
-                        </div>
-                    </article>
-                    <li>
-
-                        <li>
-                            <p class="pInput">Парк імені Тараса Шевченка</p>
-                            <article id="Shevchenko_parkIFP PIFP">
-                                <div class="polaroidIFP">
-                                    <a href="detailIFP/Shevchenko_parkIFP.html">
-                                        <div class="containerIF">
-                                            <h2> Парк імені Тараса Шевченка </h2>
-                                        </div>
-                                </div>
-                            </article>
-                            <li>
-
-                                <li>
-                                    <p class="pInput">Фонтан Самсон</p>
-                                    <article id="SamsonIFP PIFP">
-                                        <div class="polaroidIFP">
-                                            <a href="detailIFP/Samson.html">
-                                                <div class="containerIF">
-                                                    <h2> Фонтан Самсон </h2>
-                                                </div>
-                                        </div>
-                                    </article>
-                                </li>
-
-
-
-
-
-
 
             </div>
         </div>
+        </div>
 
-    </main>
+
+    </header>
 
 
+    <div class="wrapper">
+        <div class="con"></div>
+        <div id="scrolTop" class="isShowBtn isShowBtn_hide ">
+            <i class="icon-caret-up"></i>
+        </div>
+
+        <!-- <div id="scrolDown" class="isShowBtnDown isShowBtnDown_hide">
+			<i class="fa-solid fa-caret-down"></i>
+		</div> -->
+
+        <!-- ----------------------------------------------------------------------------------------------------------------------------------------------- -->
+
+
+
+        <div id="list" class="mainPage">
+
+
+            <li>
+                <p class="pInput">Андріївський Узвіз</p>
+                <article id="Andrew_Descent">
+                    <div class="polaroid">
+                        <a href="detail/Andrew_Descent.html">
+                            <img src="detail/img/Andrew_Descent.jpg" class="Img" alt="">
+                            <div class="container">
+                                <h2> Андріївський Узвіз </h2>
+                            </div>
+                        </a>
+                    </div>
+                </article>
+            </li>
+
+            <li>
+                <p class="pInput">Будинок Листовничого</p>
+                <article id="dom_bylgakava">
+                    <div class="polaroid">
+                        <a href="detail/dom_bylgakava.html">
+                            <img src="detail/img/dom_bylgakava.jpg" class="Img">
+                            <div class="container">
+                                <h2> Будинок Листовничого </h2>
+                            </div>
+                        </a>
+                    </div>
+                </article>
+            </li>
+
+            <li>
+                <p class="pInput">Пам'ятник їжака в тумані</p>
+                <article id="ez_v_tymane">
+                    <div class="polaroid">
+                        <a href="detail/ez_v_tymane.html">
+                            <img src="detail/img/ez_v_tymane.jpg" class="Img">
+                            <div class="container">
+                                <h2> Пам'ятник їжака в тумані </h2>
+                            </div>
+                        </a>
+                    </div>
+                </article>
+            </li>
+
+            <li>
+                <p class="pInput">Київський фунікулер</p>
+                <article id="Funicular">
+                    <div class="polaroid">
+                        <a href="detail/Funicular.html">
+                            <img src="detail/img/Funicular.jpg" class="Img">
+                            <div class="container">
+                                <h2> Київський фунікулер </h2>
+                            </div>
+                        </a>
+                    </div>
+                </article>
+            </li>
+
+            <li>
+                <p class="pInput">Гідропарк</p>
+                <article id="gidrapark">
+                    <div class="polaroid">
+                        <a href="detail/gidrapark.html" />
+                        <img src="detail/img/gidrapark.jpg" class="Img">
+                        <div class="container">
+                            <h2> Гідропарк </h2>
+                        </div>
+                    </div>
+                </article>
+            </li>
+
+            <li>
+                <p class="pInput">Золоті ворота</p>
+                <article id="Golden_Gate">
+                    <div class="polaroid">
+                        <a href="detail/Golden_Gate.html" />
+                        <img src="detail/img/Golden_Gate.jpg" class="Img">
+                        <div class="container">
+                            <h2> Золоті ворота </h2>
+                        </div>
+                    </div>
+                </article>
+            </li>
+
+            <li>
+                <p class="pInput">Будинок з химерами</p>
+                <article id="House_with_chimeras">
+                    <div class="polaroid">
+                        <a href="detail/House_with_chimeras.html" />
+                        <img src="detail/img/House_with_chimeras.jpg" class="Img">
+                        <div class="container">
+                            <h2> Будинок з химерами </h2>
+                        </div>
+                    </div>
+                </article>
+            </li>
+
+            <li>
+                <p class="pInput">Костел Святого Миколая</p>
+                <article id="kastel">
+                    <div class="polaroid">
+                        <a href="detail/kastel.html" />
+                        <img src="detail/img/kastel.jpg" class="Img">
+                        <div class="container">
+                            <h2> Костел Святого Миколая </h2>
+                        </div>
+                    </div>
+                </article>
+            </li>
+
+            <li>
+                <p class="pInput">Київська фортеця</p>
+                <article id="kievska_krepast">
+                    <a href="detail/kievska_krepast.html" />
+                    <div class="polaroid">
+                        <img src="detail/img/kievska_krepast.jpg" class="Img">
+                        <div class="container">
+                            <h2> Київська фортеця </h2>
+                        </div>
+                    </div>
+                </article>
+            </li>
+
+            <li>
+                <p class="pInput">Хрещатик</p>
+                <article id="kreshatik">
+                    <a href="detail/kreshatik.html" />
+                    <div class="polaroid">
+                        <img src="detail/img/kreshatik.jpg" class="Img">
+                        <div class="container">
+                            <h2> Хрещатик </h2>
+                        </div>
+                    </div>
+                </article>
+            </li>
+
+            <li>
+                <p class="pInput">Пейзажна алея</p>
+                <article id="Landscape_alley">
+                    <a href="detail/Landscape_alley.html" />
+                    <div class="polaroid">
+                        <img src="detail/img/Landscape_alley.jpg" class="Img">
+                        <div class="container">
+                            <h2> Пейзажна алея </h2>
+                        </div>
+                    </div>
+                </article>
+            </li>
+
+            <li>
+                <p class="pInput">Авіційний музей у Київі</p>
+                <article id="myzey_aviazei">
+                    <a href="detail/myzey_aviazei.html" />
+                    <div class="polaroid">
+                        <img src="detail/img/myzey_aviazei3.jpg" class="Img">
+                        <div class="container">
+                            <h2> Авіційний музей у Київі </h2>
+                        </div>
+                    </div>
+                </article>
+            </li>
+
+            <li>
+                <p class="pInput">Національний музей історії України</p>
+                <article id="myzey_ykrain">
+                    <a href="detail/myzey_ykrain.html" />
+                    <div class="polaroid">
+                        <img src="detail/img/myzey_ykrain.jpg" class="Img">
+                        <div class="container">
+                            <h2> Національний музей історії України </h2>
+                        </div>
+                    </div>
+                </article>
+            </li>
+
+            <li>
+                <p class="pInput">Парк вічної слави</p>
+                <article id="Park_of_Eternal_Glory">
+                    <a href="detail/Park_of_Eternal_Glory.html" />
+                    <div class="polaroid">
+                        <img src="detail/img/Park_of_Eternal_Glory.jpg" class="Img">
+                        <div class="container">
+                            <h2> Парк вічної слави </h2>
+                        </div>
+                    </div>
+                </article>
+            </li>
+
+            <li>
+                <p class="pInput">Печерський район</p>
+                <article id="pechersk">
+                    <a href="detail/pechersk.html" />
+                    <div class="polaroid">
+                        <img src="detail/img/pechersk.jpg" class="Img">
+                        <div class="container">
+                            <h2> Печерський район </h2>
+                        </div>
+                    </div>
+                </article>
+            </li>
+
+            <li>
+                <p class="pInput">Пуща-Водиця</p>
+                <article id="pysha">
+                    <a href="detail/pysha.html" />
+                    <div class="polaroid">
+                        <img src="detail/img/pysha3.jpg" class="Img">
+                        <div class="container">
+                            <h2> Пуща-Водиця </h2>
+                        </div>
+                    </div>
+                </article>
+            </li>
+
+            <li>
+                <p class="pInput">Парк Тараса Шевченко</p>
+                <article id="Shevchenko_park">
+                    <a href="detail/Shevchenko_park.html" />
+                    <div class="polaroid">
+                        <img src="detail/img/Shevchenko_park2.jpg" class="Img">
+                        <div class="container">
+                            <h2> Парк Тараса Шевченко </h2>
+                        </div>
+                    </div>
+                </article>
+            </li>
+
+            <li>
+                <p class="pInput">Національна опера України</p>
+                <article id="teatr_shevchenka">
+                    <a href="detail/teatr_shevchenka.html" />
+                    <div class="polaroid">
+                        <img src="detail/img/teatr_shevchenka.jpg" class="Img">
+                        <div class="container">
+                            <h2> Національна опера України </h2>
+                        </div>
+                    </div>
+                </article>
+            </li>
+
+            <li>
+                <p class="pInput">Острів Труханов</p>
+                <article id="Trukhanov_Island">
+                    <a href="detail/Trukhanov_Island.html" />
+                    <div class="polaroid">
+                        <img src="detail/img/Trukhanov_Island.jpg" class="Img">
+                        <div class="container">
+                            <h2> Острів Труханов </h2>
+                        </div>
+                    </div>
+                </article>
+            </li>
+
+            <li>
+                <p class="pInput">Храм Святителя Чудотворця Миколи на водах</p>
+                <article id="xram_na_vade">
+                    <a href="detail/xram_na_vade.html" />
+                    <div class="polaroid">
+                        <img src="detail/img/xram_na_vade2.jpg" class="Img">
+                        <div class="container">
+                            <h2> Храм Святителя Чудотворця Миколи на водах </h2>
+                        </div>
+                    </div>
+                </article>
+            </li>
+
+            <li>
+                <p class="pInput">Михайлівський Золотоверхий монастир</p>
+                <article id="mixalavski_zolotoverx">
+                    <a href="detail/mixalavski_zolotoverx.html" />
+                    <div class="polaroid">
+                        <img src="detail/img/mixalavski_zolotoverx.jpg" class="Img">
+                        <div class="container">
+                            <h2> Михайлівський Золотоверхий монастир </h2>
+                        </div>
+                    </div>
+                </article>
+            </li>
+
+            <li>
+                <p class="pInput">Батьківщина мати</p>
+                <article id="rodina_mati">
+                    <a href="detail/rodina_mati.html" />
+                    <div class="polaroid">
+                        <img src="detail/img/rodina_mati.jpg" class="Img">
+                        <div class="container">
+                            <h2> Батьківщина мати </h2>
+                        </div>
+                    </div>
+                </article>
+            </li>
+
+            <li>
+                <p class="pInput">Київо-Печерська Лавра</p>
+                <article id="lavra">
+                    <a href="detail/lavra.html" />
+                    <div class="polaroid">
+                        <img src="detail/img/lavra.jpg" class="Img">
+                        <div class="container">
+                            <h2> Київо-Печерська Лавра </h2>
+                        </div>
+                    </div>
+                </article>
+            </li>
+
+            <li>
+                <p class="pInput">Маріїнський палац</p>
+                <article id="Mariinsky_Palace">
+                    <a href="detail/Mariinsky_Palace.html" />
+                    <div class="polaroid">
+                        <img src="detail/img/Mariinsky_Palace.jpg" class="Img">
+                        <div class="container">
+                            <h2> Маріїнський палац </h2>
+                        </div>
+                    </div>
+                </article>
+            </li>
+
+            <li>
+                <p class="pInput">Сквер Київських інтелігентів</p>
+                <article id="Square_Kyiv_intellectuals">
+                    <a href="detail/Square_Kyiv_intellectuals.html" />
+                    <div class="polaroid">
+                        <img src="detail/img/Square_Kyiv_intellectuals.jpg" class="Img">
+                        <div class="container">
+                            <h2> Сквер Київських інтелігентів </h2>
+                        </div>
+                    </div>
+                </article>
+            </li>
+
+            <li>
+                <p class="pInput">Музей води</p>
+                <article id="Museum_water">
+                    <a href="detail/Museum_water.html" />
+                    <div class="polaroid">
+                        <img src="detail/img/Museum_water.jpg" class="Img">
+                        <div class="container">
+                            <h2> Музей води </h2>
+                        </div>
+                    </div>
+                </article>
+            </li>
+
+            <li>
+                <p class="pInput">Софійський собор</p>
+                <article id="Sophia_Cathedral">
+                    <a href="detail/Sophia_Cathedral.html" />
+                    <div class="polaroid">
+                        <img src="detail/img/Sophia_Cathedral.jpg" class="Img">
+                        <div class="container">
+                            <h2> Софійський собор </h2>
+                        </div>
+                    </div>
+                </article>
+            </li>
+
+            <li>
+                <p class="pInput">Андріївська церква</p>
+                <article id="Andrews_Church">
+                    <a href="detail/Andrews_Church.html" />
+                    <div class="polaroid">
+                        <img src="detail/img/Andrews_Church.jpg" class="Img">
+                        <div class="container">
+                            <h2> Андріївська церква </h2>
+                        </div>
+                    </div>
+                </article>
+            </li>
+
+            <li>
+                <p class="pInput">Національний ботанічний сад імені М.М.Гришка</p>
+                <article id="Botanical_Garden">
+                    <a href="detail/Botanical_Garden.html" />
+                    <div class="polaroid">
+                        <img src="detail/img/Botanical_Garden.jpg" class="Img">
+                        <div class="container">
+                            <h2> Національний ботанічний сад імені М.М.Гришка </h2>
+                        </div>
+                    </div>
+                </article>
+            </li>
+
+            <li>
+                <p class="pInput">Церква Успіння Богородиці Пирогощі</p>
+                <article id="Church_Dormition_Virgin_Pirogosha">
+                    <a href="detail/Church_Dormition_Virgin_Pirogosha.html" />
+                    <div class="polaroid">
+                        <img src="detail/img/Church_Dormition_Virgin_Pirogosha.jpg" class="Img">
+                        <div class="container">
+                            <h2> Церква Успіння Богородиці Пирогощі </h2>
+                        </div>
+                    </div>
+                </article>
+            </li>
+
+            <li>
+                <p class="pInput">Жовтневий палац</p>
+                <article id="OctoberPalace">
+                    <a href="detail/OctoberPalace.html" />
+                    <div class="polaroid">
+                        <img src="detail/img/OctoberPalace.jpg" class="Img">
+                        <div class="container">
+                            <h2> Жовтневий палац </h2>
+                        </div>
+                    </div>
+                </article>
+            </li>
+
+            <li>
+                <p class="pInput">Трьохсвятительська церква</p>
+                <article id="Triochsvyatitelska">
+                    <a href="detail/Triochsvyatitelska.html" />
+                    <div class="polaroidh">
+                        <img src="detail/img/Triochsvyatitelska.jpg" class=" Img ">
+                        <div class="container">
+                            <h2> Трьохсвятительська церква </h2>
+                        </div>
+                    </div>
+                </article>
+            </li>
+
+            <li>
+                <p class="pInput">Фонтан Самсон</p>
+                <article id="Samson">
+                    <div class="polaroid">
+                        <a href="detail/Samson.html" />
+                        <img src="detail/img/samson.jpg" class="Img" alt="">
+                        <div class="container">
+                            <h2> Фонтан Самсон </h2>
+                        </div>
+                    </div>
+                </article>
+            </li>
+
+            <li>
+                <p class="pInput">Володимирський собор</p>
+                <article id="VolodymyrCathedral">
+                    <div class="polaroid">
+                        <a href="detail/VolodymyrCathedral.html">
+                            <img src="detail/img/VolodymyrCathedral.jpg" class="Img" alt="">
+                            <div class="container">
+                                <h2> Володимирський собор </h2>
+                            </div>
+                        </a>
+                    </div>
+                </article>
+            </li>
+
+            <li>
+                <p class="pInput">Воздвиженська вулиця</p>
+                <article id="Vozdvizhenska">
+                    <div class="polaroid">
+                        <a href="detail/Vozdvizhenska.html">
+                            <img src="detail/img/Vozdvizhenska.jpg" class="Img" alt="">
+                            <div class="container">
+                                <h2> Воздвиженська вулиця </h2>
+                            </div>
+                        </a>
+                    </div>
+                </article>
+            </li>
+
+            <li>
+                <p class="pInput">Церква Воздвиження</p>
+                <article id="Ascension">
+                    <div class="polaroid">
+                        <a href="detail/Ascension.html">
+                            <img src="detail/img/Ascension.jpg" class="Img" alt="">
+                            <div class="container">
+                                <h2> Церква Воздвиження </h2>
+                            </div>
+                        </a>
+                    </div>
+                </article>
+            </li>
+
+            <li>
+                <p class="pInput">Замковая гора</p>
+                <article id="Castle">
+                    <div class="polaroid">
+                        <a href="detail/Castle.html">
+                            <img src="detail/img/Castle.jpg" class="Img" alt="">
+                            <div class="container">
+                                <h2> Замковая гора </h2>
+                            </div>
+                        </a>
+                    </div>
+                </article>
+            </li>
+
+        </div>
+
+        <!-- ----------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+
+
+
+
+        <p class="in">За вашим запитом нічого не знайдено.</p>
+
+    </div>
+
+
+
+
+
+
+
+
+
+    <footer>
+        <div class="preloader">
+            <div class="preloader__row">
+                <div class="preloader__item"></div>
+                <div class="preloader__item"></div>
+            </div>
+        </div>
+    </footer>
 
 </body>
+
+
 
 </html>
